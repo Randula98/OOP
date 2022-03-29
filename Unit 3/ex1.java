@@ -1,14 +1,14 @@
 class Main{
     public static void main(String[] args) {
-        // int a = 10;
-        // int b = 3;
+        int a = 10;
+        int b = 3;
 
-        // double c = (double) a / b;
+        double c = (double) a / b;
 
-        // System.out.println(c);
+        System.out.println(c);
 
 
-        // System.out.println();
+        System.out.println();
 
         //array declaration
         int data[];
