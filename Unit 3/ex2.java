@@ -1,39 +1,48 @@
 class Student{
-	private int ID;
-	protected int mark1;
-	protected int mark2;
-	protected int mark3;
-	
-	
-	public Student(int iD, int mark1, int mark2, int mark3) {
-		super();
-		ID = iD;
-		this.mark1 = mark1;
-		this.mark2 = mark2;
-		this.mark3 = mark3;
-	}
-	
-	public void displayDetails()
-	{
-		System.out.println("ID : " + ID);
-		System.out.println(mark1 + " " + mark2 + " "  + mark3);
-	}
-}
+    private int ID;
+    private String name;
+    private static String course;
 
-class Calculation{
-	
-	public static void calcTotal(Student st)
-	{
-		int total = st.mark1 + st.mark2 + st.mark3;
-		System.out.println("Total Marks : " + total);
-	}
+    public Student(int ID , String name){
+        this.ID = ID;
+        this.name = name;
+    }
+
+    public void printDetails(){
+        System.out.println("ID : " + ID);
+        System.out.println("Name : " + name);
+        System.out.println("Course : " +course);
+        System.out.println();
+    }
+
+    public void setCourse(String mCourse){
+        course = mCourse;
+    } 
+    
+    public static void Hello()
+    {
+    	System.out.println("Hello World");
+    }
+    
+    public static void showCourse()
+    {
+    	System.out.println("Course : " + course);
+    }
 }
 
 class Main{
-	public static void main(String[] args) 
-	{
-		Student st1 = new Student(1 , 80 , 90 , 90);
-		st1.displayDetails();
-		Calculation.calcTotal(st1);
-	}
+    public static void main(String[] args) {
+        Student s1 = new Student(1, "Smith");
+        Student s2 = new Student(2, "Nick");
+
+        s1.setCourse("SE");
+
+        System.out.println("Student 1");
+        s1.printDetails();
+        
+        System.out.println("Student 2");
+        s2.printDetails();
+        
+        Student.showCourse();
+    }
 }
