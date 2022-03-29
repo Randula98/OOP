@@ -21,8 +21,8 @@ class Shape{
 
 class Rectangle extends Shape{
     //attributes
-    private int width;
-    private int height;
+    protected int width;
+    protected int height;
 
     //methods
     public Rectangle(String name , int width , int height)
@@ -31,6 +31,12 @@ class Rectangle extends Shape{
         this.width = width;
         this.height = height;
     }
+    
+    public void displayParameters()
+    {
+    	System.out.println("Width : " + width + " Height : " + height); 	
+    }
+   
     public void printDetails()
     {
         System.out.println("Name : " + this.name);
@@ -41,6 +47,31 @@ class Rectangle extends Shape{
     public int calcArea()
     {
         return width * height;
+    }
+}
+
+class Box extends Rectangle{
+	//attribute
+	private int length;
+
+	public Box(String name, int width, int height , int length) {
+		super(name, width, height);
+		// TODO Auto-generated constructor stub
+		this.length = length;
+	}
+	
+	public void printDetails()
+    {
+        System.out.println("Name : " + this.name);
+        System.out.println("Width : " + this.width);
+        System.out.println("Height : " + this.height);
+        System.out.println("Length : " + this.length);
+        System.out.println("Area : " + this.calcArea());
+    }
+	
+	public int calcArea()
+    {
+        return 2 * ((length * height) + (length * width) + (height * width));
     }
 }
 
@@ -55,6 +86,12 @@ class Main{
         r1.printName();
         System.out.println();
         r1.printDetails();
-
+        
+        System.out.println();
+        
+        Box b1 = new Box("Box 1" , 10 , 15 , 20);
+        b1.printName();
+        System.out.println();
+        b1.printDetails();
     }
 }
