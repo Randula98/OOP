@@ -12,11 +12,11 @@ class Student{
         age = 0;
     }
 
-    public Student(int ID , String Sname , int Sage)
+    public Student(int studentID , String name , int age)
     {
-        studentID = ID;
-        name = Sname;
-        age = Sage;
+        this.studentID = studentID;
+        this.name = name;
+        this.age = age;
     }
 
     //methods
@@ -24,7 +24,7 @@ class Student{
     {
         System.out.println("ID : " + studentID);
         System.out.println("Name : " + name);
-        System.out.println("Age : " + age);
+        System.out.println("Age : " + this.getAge());
     }
 
     //setters , mutators
