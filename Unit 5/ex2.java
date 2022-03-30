@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Main{
 	public static void main(String[] args) {
 		
@@ -18,6 +20,7 @@ class Main{
 		
 		String str3 = new String("Hello");
 		String str4 = new String("Hello");
+		String str5 = str4;
 		
 		System.out.println("String Obejct");
 		if(str3 == str4)
@@ -39,6 +42,17 @@ class Main{
 		else
 		{
 			System.out.println("false");
+		}
+		
+		System.out.println();
+		System.out.println("Compare str4 and str5");
+		if (str4 == str5)
+		{
+			System.out.println("True");
+		}
+		else
+		{
+			System.out.println("False");
 		}
 	}
 	
